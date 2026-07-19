@@ -1,0 +1,168 @@
+/* =========================================
+   Global Reset
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   Full Screen Layout
+========================================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* =========================================
+   Body
+========================================= */
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #eff6ff 0%,
+    #dbeafe 50%,
+    #bfdbfe 100%
+  );
+  color: #333;
+}
+
+/* =========================================
+   Headings
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* =========================================
+   Card
+========================================= */
+
+.card {
+  background: #fcfcfc;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================
+   Form Controls
+========================================= */
+
+.form-control {
+  height: 48px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  padding: 10px 14px;
+  transition: all 0.3s ease;
+}
+
+textarea.form-control {
+  height: auto;
+  resize: none;
+}
+
+.form-control:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}
+
+/* =========================================
+   Labels
+========================================= */
+
+.form-label {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* =========================================
+   Buttons
+========================================= */
+
+.btn {
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #2563eb;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   Links
+========================================= */
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   Navbar
+========================================= */
+
+.navbar {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+   Validation Messages
+========================================= */
+
+.validation-success {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.validation-error {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+/* =========================================
+   Dashboard
+========================================= */
+
+.dashboard {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+/* =========================================
+   Smooth Scrolling
+========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
