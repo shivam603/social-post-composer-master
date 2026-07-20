@@ -4,7 +4,15 @@ A full-stack MERN application that allows users to compose and manage social med
 
 ---
 
-## 📌 Project Overview
+## � Live Demo
+
+Check out the deployed frontend here:
+
+https://social-post-composer-master-peach.vercel.app/
+
+---
+
+## �📌 Project Overview
 
 Social Post Composer is designed to help users create posts that can be shared across different social media platforms such as Twitter (X), LinkedIn, Instagram, and Facebook.
 
@@ -267,6 +275,23 @@ MONGO_URI=Your_MongoDB_Atlas_Connection_String
 
 JWT_SECRET=Your_JWT_Secret
 ```
+
+### Deploying to Render
+
+If you deploy the backend to Render, do not use `127.0.0.1:27017` for `MONGO_URI`.
+Render runs in a container, so your local MongoDB is not accessible there.
+
+Use a cloud database such as MongoDB Atlas or Render Database, then add these values in Render's environment variables:
+
+- `PORT=5000`
+- `MONGO_URI=<your cloud MongoDB URI>`
+- `JWT_SECRET=<your jwt secret>`
+
+Your Vercel frontend should also use the Render backend endpoint in its environment settings:
+
+- `VITE_API_URL=https://<your-render-service>.onrender.com/api`
+
+Then redeploy the frontend.
 
 ---
 
