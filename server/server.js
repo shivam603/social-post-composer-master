@@ -9,7 +9,18 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://social-post-composer-master-peach.vercel.app",
+      "http://localhost:5173",
+      "https://social-post-composer-master.onrender.com",
+    ],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
+app.options("*", cors());
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
